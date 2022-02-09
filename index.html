@@ -45,5 +45,78 @@
 
 </ul>
 <a href="aboutme.html">aboutme</a>
-    </body>
+<h1>SPORTS</h1>
+<table>
+  <tr>
+      <th>Sports</th>
+      <th>Location</th>
+<th>Amount
+</th>
+  </tr>
+  <tr>
+      <td>Cricket</td>
+<td>LB Nagar</td>
+<td>20$</td> 
+</tr>
+<tr>
+   <td>Tennis</td>
+<td>TKR Nagar</td>
+<td>$67</td>
+</tr>
+<tr>
+   <td>Base ball</td>
+<td>RR Puram</td>
+<td>$77</td>
+
+</tr>
+</table>
+<hr>
+<h1>Elementary Geometry</h1>
+<blockquote cite ="https://en.wikipedia.org/wiki/Geometry">Algebra is one of the broad areas of mathematics. Roughly speaking, algebra is the study of mathematical symbols and the rules for manipulating these </blockquote>
+<a href="https://cp-algorithms.com/geometry/basic-geometry.html">Name  of the link</a>
+<pre>
+    
+struct point2d {
+    ftype x, y;
+    point2d() {}
+    point2d(ftype x, ftype y): x(x), y(y) {}
+    point2d& operator+=(const point2d &t) {
+        x += t.x;
+        y += t.y;
+        return *this;
+    }
+    point2d& operator-=(const point2d &t) {
+        x -= t.x;
+        y -= t.y;
+        return *this;
+    }
+    point2d& operator*=(ftype t) {
+        x *= t;
+        y *= t;
+        return *this;
+    }
+    point2d& operator/=(ftype t) {
+        x /= t;
+        y /= t;
+        return *this;
+    }
+    point2d operator+(const point2d &t) const {
+        return point2d(*this) += t;
+    }
+    point2d operator-(const point2d &t) const {
+        return point2d(*this) -= t;
+    }
+    point2d operator*(ftype t) const {
+        return point2d(*this) *= t;
+    }
+    point2d operator/(ftype t) const {
+        return point2d(*this) /= t;
+    }
+};
+point2d operator*(ftype a, point2d b) {
+    return b * a;
+}
+</pre>
+
+</body>
 </html>
